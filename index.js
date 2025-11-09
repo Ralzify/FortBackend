@@ -26,29 +26,32 @@ express.use(require("./structure/cloudstorage.js"));
 express.use(require("./structure/mcp.js"));
 
 try {
-    console.log("                                                   ");
-    console.log("                                                   ");
-
     const bannerPath = path.join(__dirname, "responses", "banner.txt");
     if (fs.existsSync(bannerPath)) {
         const banner = fs.readFileSync(bannerPath, "utf8");
+        console.log("                                                   ");
+        console.log("                                                   ");
         console.log(banner);
+        console.log("                                                   ");
+        console.log("                                                   ");
     } else {
-        console.log("=== Fort Backend ===");
+        console.log('Failed to load banner. Was it deleted?\n');
     }
-
-    console.log("                                                   ");
-    console.log("                                                   ");
 
 } catch (err) {
     console.error("Failed to load banner:", err);
 }
 
+console.log("Welcome to Fort Backend!");
+
 const port = process.env.PORT || 3551;
 express.listen(port, () => {
-    console.log("Listening to port", port, "!");
+    console.log("Backend Connected to Port", port, "!");
 
     require("./structure/xmpp.js");
+
+    require("./structure/backend.js");
+
 }).on("error", (err) => {
     if (err.code == "EADDRINUSE") console.log(`\x1b[31mERROR\x1b[0m: Port ${port} is already in use!`);
     else throw err;

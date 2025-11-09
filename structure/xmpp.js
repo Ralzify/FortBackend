@@ -7,7 +7,7 @@ const matchmaker = require("./matchmaker.js");
 
 const port = 80;
 
-const wss = new WebSocket({ port: port }, () => console.log("XMPP and Matchmaker started listening on port", port, "!"));
+const wss = new WebSocket({ port: port }, /*() => console.log("XMPP and Matchmaker started listening on port", port, "!")*/);
 wss.on("error", (err) => {
     console.log("XMPP and Matchmaker \x1b[31mFAILED\x1b[0m to start hosting.");
 })
