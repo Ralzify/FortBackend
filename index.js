@@ -25,9 +25,28 @@ express.use(require("./structure/matchmaking.js"));
 express.use(require("./structure/cloudstorage.js"));
 express.use(require("./structure/mcp.js"));
 
+try {
+    console.log("                                                   ");
+    console.log("                                                   ");
+
+    const bannerPath = path.join(__dirname, "responses", "banner.txt");
+    if (fs.existsSync(bannerPath)) {
+        const banner = fs.readFileSync(bannerPath, "utf8");
+        console.log(banner);
+    } else {
+        console.log("=== Fort Backend ===");
+    }
+
+    console.log("                                                   ");
+    console.log("                                                   ");
+
+} catch (err) {
+    console.error("Failed to load banner:", err);
+}
+
 const port = process.env.PORT || 3551;
 express.listen(port, () => {
-    console.log("LawinServer started listening on port", port);
+    console.log("Listening to port", port, "!");
 
     require("./structure/xmpp.js");
 }).on("error", (err) => {
