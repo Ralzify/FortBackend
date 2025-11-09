@@ -17,19 +17,14 @@ express.use((req, res, next) => {
     else return next();
 })
 
-express.get("/fortnite/api/cloudstorage/system", async (req, res) => {
-    const memory = functions.GetVersionInfo(req);
+express.get("/fortnite/api/cloudstorage/system", (req, res) => {
+    const dir = path.join(__dirname, "..", "CloudStorage");
 
-    if (memory.build >= 9.40 && memory.build <= 10.40) {
-        return res.status(404).end();
-    }
-
-    const dir = path.join(__dirname, "..", "CloudStorage")
     var CloudFiles = [];
 
     fs.readdirSync(dir).forEach(name => {
         if (name.toLowerCase().endsWith(".ini")) {
-            const ParsedFile = fs.readFileSync(path.join(dir, name), 'utf-8');
+            const ParsedFile = fs.readFileSync(path.join(dir, name)).toString();
             const ParsedStats = fs.statSync(path.join(dir, name));
 
             CloudFiles.push({
@@ -47,8 +42,8 @@ express.get("/fortnite/api/cloudstorage/system", async (req, res) => {
         }
     });
 
-    res.json(CloudFiles)
-})
+    res.json(CloudFiles);
+});
 
 express.get("/fortnite/api/cloudstorage/system/:file", async (req, res) => {
     const memory = functions.GetVersionInfo(req);
