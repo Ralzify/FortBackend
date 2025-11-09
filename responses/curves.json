@@ -1,0 +1,33 @@
+{
+  "1": {
+    "name": "Impulse Momentum",
+    "key": "Default.KnockGrenade.LaunchVelocity",
+    "type": "amount"
+  },
+  "2": {
+    "name": "Shockwave Momentum",
+    "key": "Default.ShockwaveGrenade.LaunchVelocity",
+    "type": "amount"
+  },
+  "3": {
+    "name": "Flint-Knock Momentum",
+    "key": "Default.PistolFlintlock.KnockMagSelf",
+    "type": "amount"
+  },
+  "4": {
+    "name": "Dub Shotgun Momentum",
+    "key": "Default.Dub.KnockMagSelf",
+    "type": "amount"
+  },
+  "5": {
+    "name": "Launch Pad Momentum",
+    "key": "Default.Launchpad.LaunchStrength",
+    "type": "amount"
+  },
+  "6": {
+    "name": "Glider Redeploy",
+    "key": "Default.GliderRedeploy.CanRedeploy",
+    "type": "static",
+    "staticValue": "1"
+  }
+}

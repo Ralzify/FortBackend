@@ -39,7 +39,9 @@ function showMenu() {
                 require(bloomPath);
                 break;
             case "B":
-                require(path.join(__dirname, "..", "index.js"));
+                const curvesPath = path.join(__dirname, "curvetables.js");
+                delete require.cache[require.resolve(curvesPath)];
+                require(curvesPath);
                 break;
             case "C":
                 require(path.join(__dirname, "..", "index.js"));
