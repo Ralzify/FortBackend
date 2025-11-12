@@ -25,47 +25,74 @@
     "type": "amount"
   },
   "6": {
+    "name": "Horizontal Crash Pad Momentum",
+    "key": "Default.AppleSun.LaunchVelocity.HorizontalLaunch",
+    "type": "amount"
+  },
+  "7": {
     "name": "Launch Pad Momentum",
     "key": "Default.Launchpad.LaunchStrength",
     "type": "amount"
   },
-  "7": {
+  "8": {
     "name": "Floor Bouncer Momentum",
     "key": "Default.BouncePad.Floor.Player.MaxVelocity",
     "type": "amount"
   },
-  "8": {
+  "9": {
     "name": "Wall Bouncer Momentum",
     "key": "Default.BouncePad.Wall.Player.MaxLateralVelocity",
     "type": "amount"
   },
-  "9": {
+  "10": {
+    "name": "Cube Launch Amount",
+    "key": "Default.Cube.Impulseamount",
+    "type": "amount"
+  },
+  "11": {
     "name": "Glider Redeploy",
     "key": "Default.GliderRedeploy.CanRedeploy",
     "type": "static",
     "staticValue": "1"
   },
-  "10": {
+  "12": {
+    "name": "Glider Speed",
+    "key": "Default.ParachuteControlGliderRedeploy.MaxLateralSpeed",
+    "type": "amount"
+  },
+  "13": {
     "name": "Jules' Grappler Projectile Speed",
     "key": "Default.GrapplingHoot.Speed",
     "type": "amount"
   },
-  "11": {
+  "14": {
     "name": "Disable Jules' Grappler Glider Redeploy",
     "key": "Default.GrapplingHoot.DisableGliderDeploy",
     "type": "static",
     "staticValue": "1"
   },
-  "12": {
+  "15": {
     "name": "Infinite Crashpad Lifespan",
     "key": "Default.GrapplingHoot.DisableGliderDeploy",
     "type": "static",
     "staticValue": "99999999999999"
   },
-  "13": {
+  "16": {
     "name": "Infinite Rift Duration",
     "key": "Default.Rift.Item.ActiveDuration",
     "type": "static",
     "staticValue": "99999999999999"
+  },
+  "17": {
+    "name": "Infinite Hop Flopper Duration",
+    "key": "Default.HopFlopper.Duration",
+    "type": "static",
+    "staticValue": "99999999999999"
+  },
+  "18": {
+    "name": "Allow Neutral Editing",
+    "key": "AllowNeutralEditing",
+    "type": "static",
+    "staticValue": "1"
   }
 }
